@@ -52,6 +52,7 @@ function resetGame()
         -1, -1, -1
     ];
     
+    winner = -1;
     gameFinished = false;
 }
 
@@ -94,7 +95,11 @@ function nFilledCells(){
 
 function checkGameFinished()
 {
-    if(nFilledCells() == trackGrid.length) gameFinished = true;
+    if(nFilledCells() == trackGrid.length)
+    {
+        gameFinished = true;
+        return;
+    }
 
     if(hasWon(AI, trackGrid))
     {
