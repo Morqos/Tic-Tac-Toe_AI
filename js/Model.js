@@ -57,20 +57,20 @@ function resetGame()
 }
 
 
-function hasWon(whichPlayer, trackGrid)
+function hasWon(whichPlayer, board)
 {
     var win = false;
 
-    if((trackGrid[0] == trackGrid[1] && trackGrid[0] == trackGrid[2] && trackGrid[0] == whichPlayer) || // First Row
-        (trackGrid[3] == trackGrid[4] && trackGrid[3] == trackGrid[5] && trackGrid[3] == whichPlayer) || // Second Row
-        (trackGrid[6] == trackGrid[7] && trackGrid[6] == trackGrid[8] && trackGrid[6] == whichPlayer) || // Third Row
+    if((board[0] == board[1] && board[0] == board[2] && board[0] == whichPlayer) || // First Row
+        (board[3] == board[4] && board[3] == board[5] && board[3] == whichPlayer) || // Second Row
+        (board[6] == board[7] && board[6] == board[8] && board[6] == whichPlayer) || // Third Row
         
-        (trackGrid[0] == trackGrid[3] && trackGrid[0] == trackGrid[6] && trackGrid[0] == whichPlayer) || // First Col
-        (trackGrid[1] == trackGrid[4] && trackGrid[1] == trackGrid[7]  && trackGrid[1] == whichPlayer) || // Second Col
-        (trackGrid[2] == trackGrid[5] && trackGrid[2] == trackGrid[8] && trackGrid[2] == whichPlayer) || // Third Col
+        (board[0] == board[3] && board[0] == board[6] && board[0] == whichPlayer) || // First Col
+        (board[1] == board[4] && board[1] == board[7]  && board[1] == whichPlayer) || // Second Col
+        (board[2] == board[5] && board[2] == board[8] && board[2] == whichPlayer) || // Third Col
 
-        (trackGrid[0] == trackGrid[4] && trackGrid[0] == trackGrid[8] && trackGrid[0] == whichPlayer) || // Diagonal TopLeft
-        (trackGrid[2] == trackGrid[4] && trackGrid[2] == trackGrid[6] && trackGrid[2] == whichPlayer)    // Diagonal TopRight
+        (board[0] == board[4] && board[0] == board[8] && board[0] == whichPlayer) || // Diagonal TopLeft
+        (board[2] == board[4] && board[2] == board[6] && board[2] == whichPlayer)    // Diagonal TopRight
     )
     {
         win = true;
