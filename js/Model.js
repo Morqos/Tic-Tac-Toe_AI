@@ -95,11 +95,6 @@ function nFilledCells(){
 
 function checkGameFinished()
 {
-    if(nFilledCells() == trackGrid.length)
-    {
-        gameFinished = true;
-        return;
-    }
 
     if(hasWon(AI, trackGrid))
     {
@@ -113,4 +108,10 @@ function checkGameFinished()
         winner = Opponent;
         return;
     }
+    if(nFilledCells() == trackGrid.length)
+    {
+        gameFinished = true;
+        return;
+    }
+
 }
