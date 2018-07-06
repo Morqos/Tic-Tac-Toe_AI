@@ -40,10 +40,10 @@ function minimax(whichPlayer, board)
 {
     var indexesEmptyCells = findIndexesEmptyCells(board);
 
-    if (indexesEmptyCells.length == 0) return {score: 0}; // draw
     if(hasWon(AI, board)) return {score: 10};
     if(hasWon(Opponent, board)) return  {score: -10};
-
+    if (indexesEmptyCells.length == 0) return {score: 0}; // draw
+    
     var moves = [];
 
     for (var i = 0; i < indexesEmptyCells.length; i++)
