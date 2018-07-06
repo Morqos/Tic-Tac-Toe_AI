@@ -117,7 +117,7 @@ function firstMoveAI(){
 
 
 function AImakesMove(){
-    if(opponentMoved)
+    if(opponentMoved && !gameFinished)
     {
         if(nFilledCells() == 0) firstMoveAI();
         else
