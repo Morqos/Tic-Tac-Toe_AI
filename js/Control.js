@@ -122,7 +122,8 @@ function AImakesMove(){
         if(nFilledCells() == 0) firstMoveAI();
         else
         {
-            var move = minimax(AI, trackGrid);
+            var newBoard = trackGrid.slice();
+            var move = minimax(AI, newBoard);
             trackGrid[move["index"]] = AI;
         }
         invertWhoHasMoved();
